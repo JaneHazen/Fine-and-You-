@@ -1,5 +1,11 @@
 get '/sessions/new' do
-  erb :'sessions/new'
+  if request.xhr?
+    p "*" * 100
+    status 200
+    erb :'sessions/_new', layout: false
+  else
+    erb :'sessions/new'
+  end
 end
 
 post '/sessions' do
@@ -11,4 +17,9 @@ post '/sessions' do
     @errors = ["Invalid username or password"]
     erb :'sessions/new'
   end
+end
+
+delete '/logout' do
+  session[:user_id] = nil
+  redirect 'sessions/new'
 end

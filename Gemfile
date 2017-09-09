@@ -14,6 +14,11 @@ gem 'rake'
 
 gem 'shotgun', '~>0.9.1'
 gem 'bcrypt'
+gem 'whenever', :require => false
+# require 'rubygems'
+gem 'twilio-ruby'
+
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'

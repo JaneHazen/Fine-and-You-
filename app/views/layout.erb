@@ -18,6 +18,25 @@
   <title></title>
 </head>
 <body>
+<header>
+    <div class="header-cont">
+      <div class="header"
+      <nav>
+      <% if logged_in? %>
+        <form action="/logout" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Logout!">
+        </form>
+      <% else %>
+        <a href="/users/new">Register!</a>
+        <a href="/sessions/new">Login!</a>
+      <% end %>
+      </nav>
+      </div>
+    </div>
+  </header>
+
+
   <%= yield %>
 </body>
 </html>

@@ -1,0 +1,15 @@
+<% if @errors %>
+  <ul>
+  <% @errors.each do |error| %>
+   <li><%= error %><li>
+  <% end %>
+  <ul>
+<%end %>
+<form action="/users" method="POST">
+  <fieldset>
+  <legend>Register Here!</legend>
+  <input type="text" name="user_info[user_name]" placeholder="Username!">
+  <input type="password" name="user_info[password]" placeholder="Password!">
+  <input type="submit" name="Register!">
+  </fieldset>
+</form>

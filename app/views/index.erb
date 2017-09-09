@@ -1,0 +1,19 @@
+      <nav>
+      <% if logged_in? %>
+      <div class="buttons">
+        <form  class="btn red" action="/logout" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Logout!">
+        </form>
+      </div>
+      <% else %>
+
+      <div id="register-button" class="buttons">
+        <a id="register-link" class="btn orange" href="/users/new">Register!</a>
+      </div>
+
+      <div id="login-button" class="buttons">
+        <a class="btn green" href="/sessions/new">Login!</a>
+      </div>
+      <% end %>
+      </nav>
