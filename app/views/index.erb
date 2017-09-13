@@ -1,4 +1,3 @@
-      <nav>
       <% if logged_in? %>
       <div class="buttons">
         <form  class="btn red" action="/logout" method="POST">
@@ -8,12 +7,41 @@
       </div>
       <% else %>
 
+      <nav>
       <div id="register-button" class="buttons">
         <a id="register-link" class="btn orange" href="/users/new">Register!</a>
       </div>
-
-      <div id="login-button" class="buttons">
-        <a class="btn green" href="/sessions/new">Login!</a>
-      </div>
-      <% end %>
       </nav>
+
+      <table class="all-the-faces" width="100%" border="0">
+        <tr>
+        <td class="painscale-faces">
+        <img id="pain0" src="/faces/image_part_001.png" alt="painscale face">
+        </td>
+        <td class="painscale-faces">
+        <img id="pain1" src="/faces/image_part_002.png" alt="painscale face">
+        </td>
+        <td class="painscale-faces">
+        <img id="pain2" src="/faces/image_part_003.png" alt="painscale face">
+        </td>
+        <td class="painscale-faces">
+        <img id="pain3" src="/faces/image_part_004.png" alt="painscale face">
+        </td>
+        <td class="painscale-faces">
+        <img id="pain4" src="/faces/image_part_005.png" alt="painscale face">
+        </td>
+        <td class="painscale-faces">
+        <img id="pain5" src="/faces/image_part_006.png" alt="painscale face">
+        </td>
+        <tr>
+      </table>
+<!--         <div class="pain0 pain-div"></div>
+ -->
+
+      <nav>
+      <div id="login-button" class="buttons">
+        <a id="login-link" class="btn green" href="/sessions/new">Login!</a>
+      </div>
+      </nav>
+
+   <% end %>

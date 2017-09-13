@@ -1,27 +1,42 @@
 $(document).ready(function() {
-  $("nav").on('click', '.buttons', function(event){
+  $("#register-button").on('click', '#register-link', function(event){
     event.preventDefault();
-    var $this = $(this)
-    console.log($this)
-    var link = $this.find("a")
-    console.log(link)
-    var url = link.attr('href')
-    console.log(url);
-    var method = "GET"
+    var url = $(this).attr('href')
 
     $.ajax({
         url: url,
-        method: method
+        method: "GET"
     })
     .done(function(response){
-      $($this).append().html(response);
+
+      $("#register-button").html(response);
     })
+   });
+
+  $("#login-button").on('click', '#login-link',function(event){
+    event.preventDefault();
+    var url = $(this).attr('href')
+    $.ajax({
+        url: url,
+        method: "GET"
+    })
+    .done(function(response){
+      $("#login-button").html(response);
+    })
+   });
 
 
-  });
+
+
+});
+
+  // $("#user-password-form").on('submit', 'form', function(event){
+  //   event.preventDefault();
+  //   var $this = $(this)
+  //   console.log($this)
+  // })
   // This is called after the document has loaded in its entirety
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-});

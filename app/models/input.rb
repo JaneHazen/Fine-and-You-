@@ -1,31 +1,46 @@
   require 'twilio-ruby'
-  require 'whenever'
+  require 'rufus-scheduler'
 
 class Input < ActiveRecord::Base
   belongs_to :users
 
-  def send_text
+  # after_create :queue
 
-    client = Twilio::REST::Client.new(
-    ENV['TWILLIO1'],
-    ENV['TWILLIO2']
+  def send_greeting_text(phone)
+        client = Twilio::REST::Client.new(
+    ENV['TWILLIO_SID'],
+    ENV['TWILLIO_TOKEN']
     )
 
     client.messages.create(
       from: "[+1 402-817-7144]",
-      to: "[+1 402-405-1934]",
-      body: "Ken is soooo cooooool."
+      to: phone,
+      body: 'Thank you for registering.'
       )
   end
 
-  def recieved_input
-    content_type 'text/xml'
-    response = Twilio::TwiML::Response.new do |r|
-        self.feel << r
-        r.message "Thank you for your input"
-    end
+  def send_text(phone)
 
-  #   response.to_xml
+    client = Twilio::REST::Client.new(
+    ENV['TWILLIO_SID'],
+    ENV['TWILLIO_TOKEN']
+    )
+
+    client.messages.create(
+      from: "[+1 402-817-7144]",
+      to: phone,
+      body: 'HELLO'
+      )
   end
-  # Remember to create a migration!
+
+
+  # def recieved_input
+  #   content_type 'text/xml'
+  #   response = Twilio::TwiML::Response.new do |r|
+  #       self.feel << r
+  #       r.message "Thank you for your input"
+  #   end
+  # end
+
+
 end

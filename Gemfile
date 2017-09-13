@@ -6,6 +6,8 @@ gem 'pg'
 # Sinatra driver
 gem 'sinatra', '~> 1.0'
 gem 'sinatra-contrib'
+# gem 'delayed_job_active_record'
+gem 'rufus-scheduler'
 
 gem 'activesupport', '~>5.1.2'
 gem 'activerecord', '~>5.1.2'
@@ -14,9 +16,9 @@ gem 'rake'
 
 gem 'shotgun', '~>0.9.1'
 gem 'bcrypt'
-gem 'whenever', :require => false
 # require 'rubygems'
 gem 'twilio-ruby'
+# gem 'daemons'
 
 gem 'dotenv'
 

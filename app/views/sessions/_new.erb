@@ -6,12 +6,11 @@
   <ul>
 <%end %>
 
-<form action="/sessions" method="POST">
+<form  id= "user-password-form" action="/sessions" method="POST">
   <fieldset>
   <legend>User Login</legend>
-  <input type="text" name="user_name" placeholder="Username" =>
-  <input type="password" name="password" placeholder="Password">
+  <input type="text" name="user_info[user_name]" placeholder="Username" =>
+  <input type="password" name="user_info[password]" placeholder="Password">
   <input type="submit" name="submit!">
   </fieldset>
-
 </form>

@@ -23,11 +23,12 @@ require 'logger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
-
+# require 'delayed_job_active_record'
+# require 'daemons'
+require 'rufus-scheduler'
 require 'bcrypt'
 require 'erb'
 require 'pry-byebug'
-
 
 
 # Some helper constants for path-centric logic

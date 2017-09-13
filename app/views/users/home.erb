@@ -1,3 +1,16 @@
+<form class="buttons btn red" action="/logout" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Logout!">
+</form>
+
 This is the home page for <%= @user.user_name %>!
 
-@feels
+<form action="/users/<%=@user.id%>" method="POST">
+  <fieldset>
+    <legend>When do you want to check your mood?</legend>
+    <input type="integer" name="hours" placeholder="hour of the day">
+    <input type="integer" name="minutes" placeholder="minutes">
+    <input type="text" name="ampm" placeholder="ampm">
+    <input type="submit" name="Set">
+  <fieldset>
+</form>
