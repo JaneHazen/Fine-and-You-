@@ -11,15 +11,17 @@ At my first job out of college I worked at a rehab that focused on Dialectical B
 DBT track how their emotions shift, I created an app that will text you every day, wait for a
 numeric response, and graph these daily “feels” in a simple, elegant line graph.
 
+# Challenges: 
+
+This was my first time creating a background job. I knew that I wanted to create a Cron Job so I did thorough research on the Whenever, Rufus-Scheduler, and Delayed Jobs gems before deciding to use the scheduler add-on through Heroku after deployment. 
+
 # Features: 
 You can sign up for daily reminders by clicking this button: <br> 
 ![Button to register for the service](https://i.imgur.com/O3i8nkx.png) <br>
 Your input will be displayed on a simple line graph: <br>
 ![Line graph](https://i.imgur.com/2ur08Tb.png)
 
-# Challenges: 
-
-This was my first time creating a background job. I knew that I wanted to create a Cron Job so I did thorough research on the Whenever, Rufus-Scheduler, and Delayed Jobs gems before deciding to use the scheduler add-on through Heroku after deployment.  
+ 
 # Tech Stack: 
 * Ruby
 * Sinatra
