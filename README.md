@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/3ohhwyETMMHl125DfG/giphy.gif">
 
 </p>
-
+** USE THE SOLO-JANEHAZEN BRANCH TO SEE CODE ** 
 
 At my first job out of college I worked at a rehab that focused on Dialectical Behavior Therapy
 (DBT), a treatment that encourages people to be mindful of their emotions. To help followers of
